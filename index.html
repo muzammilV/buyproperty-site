@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +13,16 @@
             scroll-behavior: smooth;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #0a0a0a;
+            color: #ffffff;
         }
 
         h1, h2, h3, h4 {
@@ -38,24 +45,31 @@
             background-size: 200% auto;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
+            color: #000000;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-gold:hover {
             background-position: right center;
             transform: translateY(-3px);
             box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+            color: #000000;
         }
 
         .btn-outline-gold {
             border: 2px solid #D4AF37;
             color: white;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-outline-gold:hover {
             background: rgba(212, 175, 55, 0.1);
             border-color: #F4E5B8;
             transform: translateY(-2px);
+            color: white;
         }
 
         .property-card {
@@ -137,6 +151,7 @@
             box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             animation: float 3s ease-in-out infinite;
+            text-decoration: none;
         }
 
         .whatsapp-float:hover {
@@ -192,6 +207,11 @@
             color: rgba(255, 255, 255, 0.4);
         }
 
+        .input-luxury option {
+            background: #1a1a1a;
+            color: white;
+        }
+
         .stats-counter {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 700;
@@ -201,6 +221,34 @@
             backdrop-filter: blur(20px) saturate(180%);
             background: rgba(10, 10, 10, 0.85);
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #d1d5db;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #D4AF37;
+        }
+
+        .property-btn {
+            background: transparent;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            color: #D4AF37;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .property-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #D4AF37;
         }
 
         @media (max-width: 768px) {
@@ -218,18 +266,20 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
             <div class="flex justify-between items-center">
                 <div>
-                    <h1 class="text-3xl font-bold text-gold tracking-tight">
-                        BuyProperty<span class="text-white">.co</span>
-                    </h1>
-                    <p class="text-xs text-gray-400 mt-0.5 tracking-widest">LUXURY REAL ESTATE</p>
+                    <a href="#home" class="no-underline">
+                        <h1 class="text-3xl font-bold text-gold tracking-tight">
+                            BuyProperty<span class="text-white">.co</span>
+                        </h1>
+                        <p class="text-xs text-gray-400 mt-0.5 tracking-widest">LUXURY REAL ESTATE</p>
+                    </a>
                 </div>
 
                 <div class="hidden lg:flex items-center space-x-10">
-                    <a href="#home" class="text-gray-300 hover:text-gold transition-colors font-medium">Home</a>
-                    <a href="#properties" class="text-gray-300 hover:text-gold transition-colors font-medium">Properties</a>
-                    <a href="#benefits" class="text-gray-300 hover:text-gold transition-colors font-medium">Investment</a>
-                    <a href="#contact" class="text-gray-300 hover:text-gold transition-colors font-medium">Contact</a>
-                    <a href="#contact" class="btn-gold text-black px-6 py-3 rounded-lg font-semibold text-sm">
+                    <a href="#home" class="nav-link font-medium">Home</a>
+                    <a href="#properties" class="nav-link font-medium">Properties</a>
+                    <a href="#benefits" class="nav-link font-medium">Investment</a>
+                    <a href="#contact" class="nav-link font-medium">Contact</a>
+                    <a href="#contact" class="btn-gold px-6 py-3 rounded-lg font-semibold text-sm">
                         PRIVATE CONSULTATION
                     </a>
                 </div>
@@ -269,7 +319,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-5 mb-12">
-                <a href="#properties" class="btn-gold text-black px-10 py-5 rounded-lg text-lg font-bold tracking-wide">
+                <a href="#properties" class="btn-gold px-10 py-5 rounded-lg text-lg font-bold tracking-wide">
                     EXPLORE PORTFOLIO
                 </a>
                 <a href="#contact" class="btn-outline-gold px-10 py-5 rounded-lg text-lg font-semibold backdrop-blur-md">
@@ -407,10 +457,9 @@
                                 <p class="text-xs text-gold">ROI: 8.5%</p>
                             </div>
                         </div>
-                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-                                class="w-full border-2 border-gold/30 text-gold py-3 rounded-lg font-semibold hover:bg-gold/10 hover:border-gold transition-all">
+                        <a href="#contact" class="property-btn">
                             REQUEST DETAILS
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -444,10 +493,9 @@
                                 <p class="text-xs text-gold">ROI: 7.2%</p>
                             </div>
                         </div>
-                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-                                class="w-full border-2 border-gold/30 text-gold py-3 rounded-lg font-semibold hover:bg-gold/10 hover:border-gold transition-all">
+                        <a href="#contact" class="property-btn">
                             REQUEST DETAILS
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -481,16 +529,15 @@
                                 <p class="text-xs text-gold">ROI: 9.1%</p>
                             </div>
                         </div>
-                        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-                                class="w-full border-2 border-gold/30 text-gold py-3 rounded-lg font-semibold hover:bg-gold/10 hover:border-gold transition-all">
+                        <a href="#contact" class="property-btn">
                             REQUEST DETAILS
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#contact" class="inline-block btn-gold text-black px-10 py-4 rounded-lg font-bold text-lg">
+                <a href="#contact" class="btn-gold px-10 py-4 rounded-lg font-bold text-lg">
                     VIEW FULL PORTFOLIO
                 </a>
             </div>
@@ -748,7 +795,7 @@
                         <li><a href="#properties" class="hover:text-gold transition">Featured Properties</a></li>
                         <li><a href="#benefits" class="hover:text-gold transition">Investment Benefits</a></li>
                         <li><a href="#contact" class="hover:text-gold transition">Contact Advisor</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Golden Visa Guide</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition">Golden Visa Guide</a></li>
                     </ul>
                 </div>
 
@@ -804,4 +851,3 @@
 
 </body>
 </html>
-```
