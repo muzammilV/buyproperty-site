@@ -8,73 +8,84 @@
 <style>
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0;
-    background-color: #f4f4f4;
 }
 
-.header {
-    background-color: #0b3d91;
+.nav {
+    background: #0b3d91;
+    padding: 15px;
+}
+
+.nav a {
     color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c');
+    background-size: cover;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.section {
     padding: 40px;
     text-align: center;
 }
 
-.container {
-    padding: 20px;
-    text-align: center;
-}
-
 .form-box {
-    background: white;
+    background: #f4f4f4;
     padding: 20px;
-    margin: auto;
     width: 300px;
-    border-radius: 10px;
+    margin: auto;
 }
 
 input, select, button {
     width: 90%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 button {
-    background-color: #0b3d91;
+    background: #0b3d91;
     color: white;
     border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #062a63;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="header">
-<h1>Buy Property in Dubai</h1>
-<p>Get Best Deals from Trusted Dubai Real Estate Experts</p>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="properties.html">Properties</a>
+<a href="about.html">About</a>
 </div>
 
-<div class="container">
+<div class="hero">
+<h1>Invest in Dubai Real Estate</h1>
+<p>High ROI • Tax Free • Golden Visa Opportunities</p>
+</div>
+
+<div class="section">
+
+<h2>Get Free Dubai Property Consultation</h2>
 
 <div class="form-box">
 
-<h2>Get Free Consultation</h2>
-
 <form>
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" placeholder="Your Name">
 
-<input type="text" placeholder="Phone Number" required>
+<input type="text" placeholder="Phone Number">
 
 <select>
-<option>Select Budget</option>
+<option>Budget</option>
 <option>500K - 1M AED</option>
 <option>1M - 2M AED</option>
 <option>2M+ AED</option>
@@ -87,11 +98,22 @@ button:hover {
 <option>Investment</option>
 </select>
 
-<button type="submit">Get Property Deals</button>
+<button>Submit</button>
 
 </form>
 
 </div>
+
+</div>
+
+<div class="section">
+
+<h2>Why Invest in Dubai?</h2>
+
+<p>• 0% Property Tax</p>
+<p>• Up to 10% Rental Returns</p>
+<p>• Golden Visa Eligibility</p>
+<p>• World's Fastest Growing Real Estate Market</p>
 
 </div>
 
