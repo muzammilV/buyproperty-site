@@ -8,9 +8,8 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 html {
 scroll-behavior: smooth;
@@ -25,8 +24,13 @@ h1,h2,h3,h4 {
 font-family: 'Playfair Display', serif;
 }
 
-.hero-gradient {
-background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+.hero-overlay {
+background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.55));
+}
+
+.glass {
+backdrop-filter: blur(12px);
+background: rgba(255,255,255,0.08);
 }
 
 .btn-gold {
@@ -36,12 +40,16 @@ transition: all 0.3s ease;
 
 .btn-gold:hover {
 transform: translateY(-2px);
-box-shadow: 0 15px 30px rgba(212,175,55,0.3);
+box-shadow: 0 15px 35px rgba(212,175,55,0.35);
+}
+
+.property-card {
+transition: all 0.3s ease;
 }
 
 .property-card:hover {
-transform: translateY(-6px);
-transition: 0.3s;
+transform: translateY(-8px);
+box-shadow: 0 25px 50px rgba(0,0,0,0.15);
 }
 
 </style>
@@ -52,21 +60,23 @@ transition: 0.3s;
 
 <!-- NAVBAR -->
 
-<nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
 
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<h1 class="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
+<h1 class="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-500 bg-clip-text text-transparent">
 BuyProperty.co
 </h1>
 
 <div class="hidden md:flex items-center space-x-8">
 
-<a href="#home" class="hover:text-amber-600">Home</a>
-<a href="#properties" class="hover:text-amber-600">Properties</a>
-<a href="#contact" class="hover:text-amber-600">Contact</a>
+<a href="#home" class="hover:text-amber-600 transition">Home</a>
+<a href="#properties" class="hover:text-amber-600 transition">Properties</a>
+<a href="#benefits" class="hover:text-amber-600 transition">Investment Benefits</a>
+<a href="#contact" class="hover:text-amber-600 transition">Contact</a>
 
-<a href="#contact" class="btn-gold text-white px-5 py-2 rounded-lg font-semibold">
+<a href="#contact"
+class="btn-gold text-white px-5 py-2 rounded-lg font-semibold">
 Get Consultation
 </a>
 
@@ -78,39 +88,41 @@ Get Consultation
 
 <!-- HERO -->
 
-<section id="home" class="h-screen flex items-center justify-center relative">
+<section id="home" class="relative h-screen flex items-center justify-center">
 
 <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920"
 class="absolute w-full h-full object-cover">
 
-<div class="hero-gradient absolute inset-0"></div>
+<div class="absolute inset-0 hero-overlay"></div>
 
-<div class="relative text-center text-white max-w-3xl px-6">
+<div class="relative z-10 text-center text-white max-w-4xl px-6">
 
 <h1 class="text-5xl md:text-7xl font-bold mb-6">
 Invest in Dubai Real Estate
 </h1>
 
-<p class="text-xl mb-8">
-Premium Properties • Golden Visa Eligible • High ROI
+<p class="text-xl md:text-2xl text-gray-200 mb-8">
+Exclusive access to luxury apartments, villas, and investment opportunities
 </p>
 
-<div class="flex justify-center gap-4">
+<div class="flex flex-col sm:flex-row justify-center gap-4">
 
-<a href="#properties" class="btn-gold text-white px-8 py-4 rounded-lg font-semibold">
+<a href="#properties"
+class="btn-gold px-8 py-4 rounded-lg text-lg font-semibold text-white shadow-xl">
 Explore Properties
 </a>
 
-<a href="#contact" class="border border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition">
+<a href="#contact"
+class="glass border border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
 Speak to Expert
 </a>
 
 </div>
 
-<div class="mt-10 text-gray-300 text-sm flex justify-center gap-6 flex-wrap">
+<div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-300">
 
 <span>✓ Trusted Dubai Property Advisors</span>
-<span>✓ Direct Developer Deals</span>
+<span>✓ Direct Developer Access</span>
 <span>✓ Golden Visa Specialists</span>
 
 </div>
@@ -119,19 +131,19 @@ Speak to Expert
 
 </section>
 
-<!-- TRUST SECTION -->
+<!-- TRUST LOCATIONS -->
 
-<section class="py-16 text-center bg-white">
+<section class="py-16 bg-white text-center">
 
-<h3 class="text-3xl font-bold mb-4">
-Trusted Investment Locations
-</h3>
+<h2 class="text-3xl font-bold mb-6">
+Premium Investment Locations
+</h2>
 
-<div class="flex justify-center gap-10 flex-wrap text-gray-600 font-semibold">
+<div class="flex flex-wrap justify-center gap-10 text-gray-600 font-medium">
 
 <span>Downtown Dubai</span>
-<span>Dubai Marina</span>
 <span>Palm Jumeirah</span>
+<span>Dubai Marina</span>
 <span>Business Bay</span>
 
 </div>
@@ -140,17 +152,19 @@ Trusted Investment Locations
 
 <!-- PROPERTIES -->
 
-<section id="properties" class="py-20">
+<section id="properties" class="py-20 bg-gray-50">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
-Featured Properties
+<h2 class="text-4xl font-bold text-center mb-14">
+Featured Investment Opportunities
 </h2>
 
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid md:grid-cols-3 gap-10">
 
-<div class="property-card bg-white rounded-xl shadow-lg overflow-hidden">
+<!-- Property 1 -->
+
+<div class="property-card bg-white rounded-2xl overflow-hidden">
 
 <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800"
 class="w-full h-64 object-cover">
@@ -161,7 +175,7 @@ class="w-full h-64 object-cover">
 Burj Khalifa View Residence
 </h3>
 
-<p class="text-gray-600 mb-2">
+<p class="text-gray-600 mb-3">
 Downtown Dubai
 </p>
 
@@ -169,16 +183,18 @@ Downtown Dubai
 AED 4.2M
 </p>
 
-<button onclick="document.getElementById('contact').scrollIntoView()"
-class="text-amber-600 font-semibold">
-Request Details →
+<button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+class="text-amber-600 font-semibold hover:text-amber-700">
+Request Investment Details →
 </button>
 
 </div>
 
 </div>
 
-<div class="property-card bg-white rounded-xl shadow-lg overflow-hidden">
+<!-- Property 2 -->
+
+<div class="property-card bg-white rounded-2xl overflow-hidden">
 
 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800"
 class="w-full h-64 object-cover">
@@ -186,10 +202,10 @@ class="w-full h-64 object-cover">
 <div class="p-6">
 
 <h3 class="text-xl font-bold mb-2">
-Palm Jumeirah Villa
+Palm Jumeirah Luxury Villa
 </h3>
 
-<p class="text-gray-600 mb-2">
+<p class="text-gray-600 mb-3">
 Palm Jumeirah
 </p>
 
@@ -197,16 +213,18 @@ Palm Jumeirah
 AED 28.5M
 </p>
 
-<button onclick="document.getElementById('contact').scrollIntoView()"
-class="text-amber-600 font-semibold">
-Request Details →
+<button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+class="text-amber-600 font-semibold hover:text-amber-700">
+Request Investment Details →
 </button>
 
 </div>
 
 </div>
 
-<div class="property-card bg-white rounded-xl shadow-lg overflow-hidden">
+<!-- Property 3 -->
+
+<div class="property-card bg-white rounded-2xl overflow-hidden">
 
 <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800"
 class="w-full h-64 object-cover">
@@ -214,10 +232,10 @@ class="w-full h-64 object-cover">
 <div class="p-6">
 
 <h3 class="text-xl font-bold mb-2">
-Marina Luxury Penthouse
+Dubai Marina Premium Penthouse
 </h3>
 
-<p class="text-gray-600 mb-2">
+<p class="text-gray-600 mb-3">
 Dubai Marina
 </p>
 
@@ -225,9 +243,9 @@ Dubai Marina
 AED 6.8M
 </p>
 
-<button onclick="document.getElementById('contact').scrollIntoView()"
-class="text-amber-600 font-semibold">
-Request Details →
+<button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+class="text-amber-600 font-semibold hover:text-amber-700">
+Request Investment Details →
 </button>
 
 </div>
@@ -235,6 +253,24 @@ Request Details →
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section id="benefits" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+Why Invest in Dubai
+</h2>
+
+<div class="flex flex-wrap justify-center gap-12 text-lg">
+
+<span>High Rental Returns</span>
+<span>Zero Property Tax</span>
+<span>Golden Visa Eligibility</span>
 
 </div>
 
@@ -247,22 +283,22 @@ Request Details →
 <div class="max-w-3xl mx-auto px-6">
 
 <h2 class="text-4xl font-bold text-center mb-4">
-Get Expert Consultation
+Speak With a Dubai Property Expert
 </h2>
 
 <p class="text-center text-gray-500 mb-8">
-Speak directly with Dubai property specialists
+Private consultation. Direct developer access.
 </p>
 
 <form class="space-y-4">
 
-<input class="w-full border p-3 rounded"
+<input class="w-full border border-gray-300 p-3 rounded-lg"
 placeholder="Full Name">
 
-<input class="w-full border p-3 rounded"
+<input class="w-full border border-gray-300 p-3 rounded-lg"
 placeholder="Phone Number">
 
-<select class="w-full border p-3 rounded">
+<select class="w-full border border-gray-300 p-3 rounded-lg">
 
 <option>Select Budget</option>
 <option>AED 1M - 2M</option>
@@ -283,21 +319,25 @@ Submit Inquiry
 
 <!-- FOOTER -->
 
-<footer class="bg-gray-900 text-white text-center py-6">
+<footer class="bg-gray-900 text-white text-center py-8">
 
-BuyProperty.co © 2026  
-<br>
-<span class="text-gray-400 text-sm">
-Dubai Luxury Real Estate Investment Platform
-</span>
+<p class="font-semibold">
+BuyProperty.co
+</p>
+
+<p class="text-gray-400 text-sm">
+Luxury Dubai Real Estate Investment Platform
+</p>
 
 </footer>
 
-<!-- WhatsApp Button -->
+<!-- Premium WhatsApp Button -->
 
 <a href="https://wa.me/971000000000"
-class="fixed bottom-6 right-6 btn-gold text-white px-6 py-4 rounded-full shadow-lg hover:scale-105 transition">
+class="fixed bottom-6 right-6 btn-gold text-white px-6 py-4 rounded-full shadow-xl hover:scale-105 transition">
+
 WhatsApp
+
 </a>
 
 </body>
