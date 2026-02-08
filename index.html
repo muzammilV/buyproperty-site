@@ -232,6 +232,21 @@
         .nav-link:hover {
             color: #D4AF37;
         }
+        .fade-in {
+    animation: fadeInLuxury 0.6s ease forwards;
+}
+
+@keyframes fadeInLuxury {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
         .property-btn {
             background: transparent;
@@ -749,9 +764,33 @@
 
                     <button id="submit-btn"
         type="submit" 
-        class="w-full btn-gold text-black py-5 rounded-lg font-bold text-lg tracking-wide">
-    SCHEDULE PRIVATE CONSULTATION
+        class="w-full btn-gold text-black py-5 rounded-lg font-bold text-lg tracking-wide flex items-center justify-center gap-3">
+
+    <span id="btn-text">SCHEDULE PRIVATE CONSULTATION</span>
+
+    <svg id="btn-spinner"
+         class="hidden animate-spin h-5 w-5 text-black"
+         xmlns="http://www.w3.org/2000/svg"
+         fill="none"
+         viewBox="0 0 24 24">
+
+        <circle class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4">
+        </circle>
+
+        <path class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v8z">
+        </path>
+
+    </svg>
+
 </button>
+
 
                     <div id="form-success" 
      class="hidden mt-6 p-4 rounded-lg border border-gold/30 bg-gold/10 text-gold text-center font-medium">
@@ -871,9 +910,12 @@ message: document.getElementById("message").value
 };
 
 var btn = document.getElementById("submit-btn");
+var btnText = document.getElementById("btn-text");
+var spinner = document.getElementById("btn-spinner");
 
-btn.innerText = "SENDING...";
 btn.disabled = true;
+btnText.innerText = "SENDING REQUEST";
+spinner.classList.remove("hidden");
 
 fetch("https://script.google.com/macros/s/AKfycbxvS-_lH8ThCHJvboEsvYbNi_7ns9dOKnG_AIkDL9FEMSGf7lHTKyjrvxUHp2lWlHQg/exec", {
 method: "POST",
@@ -883,8 +925,12 @@ body: JSON.stringify(data)
 .then(result => {
 
 var btn = document.getElementById("submit-btn");
+var btnText = document.getElementById("btn-text");
+var spinner = document.getElementById("btn-spinner");
 
-btn.innerText = "CONSULTATION REQUEST SENT";
+btnText.innerText = "REQUEST SENT";
+spinner.classList.add("hidden");
+
 btn.disabled = true;
 
 document.getElementById("contact-form").reset();
@@ -893,7 +939,7 @@ document.getElementById("form-success").classList.remove("hidden");
 
 setTimeout(function() {
 
-btn.innerText = "SCHEDULE PRIVATE CONSULTATION";
+btnText.innerText = "SCHEDULE PRIVATE CONSULTATION";
 btn.disabled = false;
 
 document.getElementById("form-success").classList.add("hidden");
@@ -911,6 +957,7 @@ alert("Submission failed. Please try again.");
     
 </body>
 </html>
+
 
 
 
