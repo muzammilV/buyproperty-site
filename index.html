@@ -751,6 +751,12 @@
                             class="w-full btn-gold text-black py-5 rounded-lg font-bold text-lg tracking-wide">
                         SCHEDULE PRIVATE CONSULTATION
                     </button>
+                    <div id="form-success" 
+     class="hidden mt-6 p-4 rounded-lg border border-gold/30 bg-gold/10 text-gold text-center font-medium">
+     
+    ✓ Consultation request received. Our advisor will contact you shortly.
+
+</div>
 
                     <p class="text-center text-gray-500 text-sm">
                         By submitting, you agree to our privacy policy. We'll respond within 2 hours.
@@ -867,8 +873,15 @@ method: "POST",
 body: JSON.stringify(data)
 })
 .then(response => {
-alert("Thank you. Our advisor will contact you shortly.");
+
 document.getElementById("contact-form").reset();
+
+document.getElementById("form-success").classList.remove("hidden");
+
+setTimeout(function() {
+document.getElementById("form-success").classList.add("hidden");
+}, 8000);
+
 })
 .catch(error => {
 alert("Submission failed. Please try again.");
@@ -879,5 +892,6 @@ alert("Submission failed. Please try again.");
     
 </body>
 </html>
+
 
 
