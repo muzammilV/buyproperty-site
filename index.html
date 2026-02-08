@@ -747,10 +747,12 @@
                                   placeholder="Tell us about your investment goals..."></textarea>
                     </div>
 
-                    <button type="submit" 
-                            class="w-full btn-gold text-black py-5 rounded-lg font-bold text-lg tracking-wide">
-                        SCHEDULE PRIVATE CONSULTATION
-                    </button>
+                    <button id="submit-btn"
+        type="submit" 
+        class="w-full btn-gold text-black py-5 rounded-lg font-bold text-lg tracking-wide">
+    SCHEDULE PRIVATE CONSULTATION
+</button>
+
                     <div id="form-success" 
      class="hidden mt-6 p-4 rounded-lg border border-gold/30 bg-gold/10 text-gold text-center font-medium">
      
@@ -868,21 +870,38 @@ property_type: document.getElementById("property-type").value,
 message: document.getElementById("message").value
 };
 
+var btn = document.getElementById("submit-btn");
+
+btn.innerText = "SENDING...";
+btn.disabled = true;
+
 fetch("https://script.google.com/macros/s/AKfycbxvS-_lH8ThCHJvboEsvYbNi_7ns9dOKnG_AIkDL9FEMSGf7lHTKyjrvxUHp2lWlHQg/exec", {
 method: "POST",
 body: JSON.stringify(data)
 })
-.then(response => {
+.then(response => response.text())
+.then(result => {
+
+var btn = document.getElementById("submit-btn");
+
+btn.innerText = "CONSULTATION REQUEST SENT";
+btn.disabled = true;
 
 document.getElementById("contact-form").reset();
 
 document.getElementById("form-success").classList.remove("hidden");
 
 setTimeout(function() {
+
+btn.innerText = "SCHEDULE PRIVATE CONSULTATION";
+btn.disabled = false;
+
 document.getElementById("form-success").classList.add("hidden");
+
 }, 8000);
 
 })
+
 .catch(error => {
 alert("Submission failed. Please try again.");
 });
@@ -892,6 +911,7 @@ alert("Submission failed. Please try again.");
     
 </body>
 </html>
+
 
 
 
