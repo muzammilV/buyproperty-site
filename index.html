@@ -482,9 +482,9 @@ gtag('config', 'G-ZMP0SK1T38');
                                 <p class="text-xs text-gold">ROI: 8.5%</p>
                             </div>
                         </div>
-                        <a href="#contact" class="property-btn">
-                            REQUEST DETAILS
-                        </a>
+                        <a href="#contact" class="property-btn" onclick="selectProperty('apartment')">
+    REQUEST DETAILS
+</a>
                     </div>
                 </div>
 
@@ -518,9 +518,10 @@ gtag('config', 'G-ZMP0SK1T38');
                                 <p class="text-xs text-gold">ROI: 7.2%</p>
                             </div>
                         </div>
-                        <a href="#contact" class="property-btn">
-                            REQUEST DETAILS
-                        </a>
+                       <a href="#contact" class="property-btn" onclick="selectProperty('apartment')">
+    REQUEST DETAILS
+</a>
+
                     </div>
                 </div>
 
@@ -554,9 +555,10 @@ gtag('config', 'G-ZMP0SK1T38');
                                 <p class="text-xs text-gold">ROI: 9.1%</p>
                             </div>
                         </div>
-                        <a href="#contact" class="property-btn">
-                            REQUEST DETAILS
-                        </a>
+                        <a href="#contact" class="property-btn" onclick="selectProperty('apartment')">
+    REQUEST DETAILS
+</a>
+
                     </div>
                 </div>
             </div>
@@ -978,9 +980,15 @@ alert("Submission failed. Please try again.");
 
 });
 </script>
-    
+    <script>
+function selectProperty(type) {
+    document.getElementById("property-type").value = type;
+}
+</script>
+
 </body>
 </html>
+
 
 
 
