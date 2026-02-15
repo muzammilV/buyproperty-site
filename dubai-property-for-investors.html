@@ -1,64 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Property for Investors | High ROI Real Estate | BuyProperty.co</title>
+    <meta name="description" content="Explore Dubai property investment opportunities designed for global investors. High ROI, tax-free income, and Golden Visa eligibility.">
+    <link rel="canonical" href="https://buyproperty.co/dubai-property-for-investors.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "WebPage",
+     "name": "Dubai Property for Investors",
+     "url": "https://buyproperty.co/dubai-property-for-investors.html"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<title>Dubai Property for Investors | High ROI Real Estate | BuyProperty.co</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<meta name="description" content="Explore Dubai property investment opportunities designed for global investors. High ROI, tax-free income, and Golden Visa eligibility.">
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-<link rel="canonical" href="https://buyproperty.co/dubai-property-for-investors.html">
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
 
-<script src="https://cdn.tailwindcss.com"></script>
+        .text-gold {
+            background: linear-gradient(135deg, #D4AF37, #F4E5B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebPage",
- "name": "Dubai Property for Investors",
- "url": "https://buyproperty.co/dubai-property-for-investors.html"
-}
-</script>
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4E5B8 50%, #D4AF37 100%);
+            background-size: 200% auto;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.25);
+            color: #000000;
+            text-decoration: none;
+            display: inline-block;
+        }
 
+        .btn-gold:hover {
+            background-position: right center;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+            color: #000000;
+        }
+
+        .navbar-blur {
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(10, 10, 10, 0.85);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #d1d5db;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #D4AF37;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        .benefit-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: #D4AF37;
+            transform: translateY(-8px);
+        }
+
+        .icon-gold {
+            background: linear-gradient(135deg, #D4AF37, #F4E5B8);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .content-section {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+        }
+
+        .stats-box {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .stats-box:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: #D4AF37;
+            transform: translateY(-8px);
+        }
+
+        .stats-counter {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(212, 175, 55, 0.2);
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 16px 24px;
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .mobile-nav-link:hover {
+            background: rgba(212, 175, 55, 0.05);
+            color: #D4AF37;
+            padding-left: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 16px;
+            }
+        }
+    </style>
 </head>
-
 <body class="bg-black text-white">
 
-<section class="py-20 text-center">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
 
-<h1 class="text-5xl font-bold mb-6">
-Dubai Property for Investors
-</h1>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="p-6 border-b border-gold/20">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gold">BuyProperty.co</h2>
+                    <p class="text-xs text-gray-400 tracking-widest mt-1">LUXURY REAL ESTATE</p>
+                </div>
+                <button onclick="closeMobileMenu()" class="text-white">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <a href="/index.html" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+            <a href="/index.html#properties" class="mobile-nav-link" onclick="closeMobileMenu()">Properties</a>
+            <a href="/index.html#benefits" class="mobile-nav-link" onclick="closeMobileMenu()">Investment</a>
+            <a href="/index.html#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+        </nav>
+        <div class="p-6">
+            <a href="/index.html#contact" class="btn-gold px-6 py-4 rounded-lg font-semibold text-sm w-full text-center" onclick="closeMobileMenu()">
+                PRIVATE CONSULTATION
+            </a>
+        </div>
+    </div>
 
-<p class="text-gray-400 text-xl max-w-3xl mx-auto">
-Dubai offers premium real estate investment opportunities with strong rental returns and long-term appreciation potential.
-</p>
+    <!-- PREMIUM NAVBAR -->
+    <nav class="fixed w-full z-50 navbar-blur">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="/index.html" class="no-underline">
+                        <h1 class="text-3xl font-bold text-gold tracking-tight">
+                            BuyProperty<span class="text-white">.co</span>
+                        </h1>
+                        <p class="text-xs text-gray-400 mt-0.5 tracking-widest">LUXURY REAL ESTATE</p>
+                    </a>
+                </div>
 
-</section>
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="/index.html" class="nav-link font-medium">Home</a>
+                    <a href="/index.html#properties" class="nav-link font-medium">Properties</a>
+                    <a href="/index.html#benefits" class="nav-link font-medium">Investment</a>
+                    <a href="/index.html#contact" class="nav-link font-medium">Contact</a>
+                    <a href="/index.html#contact" class="btn-gold px-6 py-3 rounded-lg font-semibold text-sm">
+                        PRIVATE CONSULTATION
+                    </a>
+                </div>
 
-<section class="py-20 max-w-5xl mx-auto px-6">
+                <button class="lg:hidden text-white" onclick="openMobileMenu()" id="mobile-menu-btn">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<h2 class="text-3xl font-bold mb-6">
-Why Investors Choose Dubai Real Estate
-</h2>
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-28 md:pt-32 pb-16">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80" 
+                 alt="Dubai Property for Investors" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
+        </div>
 
-<p class="text-gray-400 mb-6">
-Dubai provides one of the safest and most profitable real estate investment environments globally.
-</p>
+        <div class="relative z-10 text-center max-w-5xl px-6 lg:px-8">
+            <div class="mb-6">
+                <span class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-semibold tracking-widest">
+                    FOR GLOBAL INVESTORS
+                </span>
+            </div>
 
-</section>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Dubai Property for <span class="text-gold">Investors</span>
+            </h1>
 
-<section class="py-20 text-center">
+            <p class="text-lg md:text-xl text-gray-300 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
+                Dubai offers premium real estate investment opportunities with strong rental returns and long-term appreciation potential designed specifically for sophisticated global investors.
+            </p>
 
-<a href="/#contact" class="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold">
-View Investment Opportunities
-</a>
+            <a href="/index.html#contact" class="btn-gold px-10 py-5 rounded-lg text-lg font-bold tracking-wide">
+                VIEW INVESTMENT OPPORTUNITIES
+            </a>
+        </div>
+    </section>
 
-</section>
+    <!-- INVESTMENT STATS -->
+    <section class="py-16 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stats-box">
+                    <h3 class="stats-counter text-4xl md:text-5xl text-gold mb-2">7-9%</h3>
+                    <p class="text-gray-400 text-sm tracking-widest">AVERAGE RENTAL YIELD</p>
+                </div>
+                <div class="stats-box">
+                    <h3 class="stats-counter text-4xl md:text-5xl text-gold mb-2">0%</h3>
+                    <p class="text-gray-400 text-sm tracking-widest">PROPERTY TAX</p>
+                </div>
+                <div class="stats-box">
+                    <h3 class="stats-counter text-4xl md:text-5xl text-gold mb-2">15-20%</h3>
+                    <p class="text-gray-400 text-sm tracking-widest">5-YEAR APPRECIATION</p>
+                </div>
+                <div class="stats-box">
+                    <h3 class="stats-counter text-4xl md:text-5xl text-gold mb-2">100%</h3>
+                    <p class="text-gray-400 text-sm tracking-widest">FOREIGN OWNERSHIP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY INVESTORS CHOOSE DUBAI -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-widest rounded-full mb-6">
+                    INVESTMENT ADVANTAGES
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Why Investors Choose <span class="text-gold">Dubai Real Estate</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Dubai provides one of the safest and most profitable real estate investment environments globally
+                </p>
+            </div>
+
+            <div class="content-section p-8 md:p-12 mb-16">
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                    Dubai's real estate market stands out as a premier destination for international investors seeking stable, high-return property investments. The emirate's strategic location, world-class infrastructure, and investor-friendly regulations create an ideal environment for wealth creation through real estate.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gold mb-3">Regulatory Stability</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Transparent legal framework with strong property rights protection and investor-friendly regulations backed by the Dubai Land Department.
+                        </p>
+                    </div>
+
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gold mb-3">Market Liquidity</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            High transaction volumes and demand ensure properties can be easily bought, sold, or rented with minimal market friction.
+                        </p>
+                    </div>
+
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gold mb-3">Economic Growth</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Dubai's diversified economy, business-friendly policies, and global connectivity drive sustained population and economic growth.
+                        </p>
+                    </div>
+
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gold mb-3">Infrastructure Excellence</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            World-class transportation, education, healthcare, and entertainment infrastructure enhances property value and rental demand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INVESTMENT TYPES -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-widest rounded-full mb-6">
+                    INVESTMENT OPTIONS
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Property Types for <span class="text-gold">Investors</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Luxury Apartments -->
+                <div class="benefit-card p-8 rounded-2xl text-center">
+                    <div class="icon-gold w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Luxury Apartments</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        High-rise apartments in prime locations offering 7-9% rental yields with strong appreciation potential.
+                    </p>
+                    <div class="text-gold font-semibold text-sm">
+                        From AED 1M - 5M
+                    </div>
+                </div>
+
+                <!-- Villas -->
+                <div class="benefit-card p-8 rounded-2xl text-center">
+                    <div class="icon-gold w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Waterfront Villas</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Premium standalone villas in exclusive communities with 5-7% yields and exceptional lifestyle benefits.
+                    </p>
+                    <div class="text-gold font-semibold text-sm">
+                        From AED 5M - 50M+
+                    </div>
+                </div>
+
+                <!-- Commercial -->
+                <div class="benefit-card p-8 rounded-2xl text-center">
+                    <div class="icon-gold w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Commercial Properties</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Office spaces and retail units in business districts offering 8-12% yields with long-term leases.
+                    </p>
+                    <div class="text-gold font-semibold text-sm">
+                        From AED 2M - 20M+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INVESTOR SUPPORT -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            
+            <div class="content-section p-8 md:p-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Complete Investor <span class="text-gold">Support Services</span>
+                </h2>
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+                    BuyProperty.co provides end-to-end support for international investors, from property selection to ongoing portfolio management. Our experienced advisors understand the unique needs of global investors.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-10 text-left">
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Pre-Investment Services</h3>
+                        <ul class="text-gray-400 space-y-2 text-sm">
+                            <li>• Market analysis and ROI projections</li>
+                            <li>• Property selection and due diligence</li>
+                            <li>• Developer verification and background checks</li>
+                            <li>• Legal documentation review</li>
+                            <li>• Financing arrangement support</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black/40 border border-gold/20 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Post-Purchase Services</h3>
+                        <ul class="text-gray-400 space-y-2 text-sm">
+                            <li>• Property management coordination</li>
+                            <li>• Tenant sourcing and screening</li>
+                            <li>• Rent collection and reporting</li>
+                            <li>• Maintenance oversight</li>
+                            <li>• Annual performance reviews</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-5">
+                    <a href="/index.html#contact" class="btn-gold px-10 py-5 rounded-lg text-lg font-bold tracking-wide">
+                        SCHEDULE CONSULTATION
+                    </a>
+                    <a href="https://wa.me/9043589875?text=Hello!%20I'm%20an%20investor%20interested%20in%20Dubai%20property" 
+                       target="_blank"
+                       class="bg-transparent border-2 border-gold/40 text-white px-10 py-5 rounded-lg text-lg font-semibold hover:bg-gold/10 transition">
+                        CONNECT ON WHATSAPP
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="inline-block px-4 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-widest rounded-full mb-6">
+                START INVESTING TODAY
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Build Your Dubai <span class="text-gold">Property Portfolio</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Access exclusive investor-grade properties with verified developers and personalized advisory services
+            </p>
+            <a href="/index.html#contact" class="btn-gold px-10 py-5 rounded-lg text-lg font-bold tracking-wide">
+                VIEW INVESTMENT OPPORTUNITIES
+            </a>
+        </div>
+    </section>
+
+    <!-- PREMIUM FOOTER -->
+    <footer class="bg-gradient-to-b from-gray-900 to-black border-t border-gray-800 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold text-gold mb-2">BuyProperty.co</h3>
+                    <p class="text-xs text-gray-500 tracking-widest mb-4">LUXURY REAL ESTATE</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Your premier gateway to Dubai's most exclusive real estate investments. Specializing in ultra-luxury properties with exceptional returns.
+                    </p>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                        BuyProperty.co is an independent global real estate investment platform connecting qualified investors with verified agents and developers in Dubai and worldwide.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Dubai, United Arab Emirates • invest@buyproperty.co
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="/index.html#properties" class="hover:text-gold transition">Featured Properties</a></li>
+                        <li><a href="/index.html#benefits" class="hover:text-gold transition">Investment Benefits</a></li>
+                        <li><a href="/index.html#contact" class="hover:text-gold transition">Contact Advisor</a></li>
+                        <li><a href="/index.html" class="hover:text-gold transition">Home</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Dubai, United Arab Emirates</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>+91 90435 89875</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>invest@buyproperty.co</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-divider mb-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 BuyProperty.co. All Rights Reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="/privacy.html" class="hover:text-gold transition">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-gold transition">Terms of Service</a>
+                    <a href="/cookie.html" class="hover:text-gold transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PREMIUM FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/9043589875?text=Hello!%20I'm%20an%20investor%20interested%20in%20Dubai%20property" 
+       target="_blank" 
+       class="whatsapp-float px-6 py-4 rounded-full text-white font-semibold flex items-center gap-3 shadow-2xl"
+       aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" class="w-7 h-7" fill="currentColor">
+            <path d="M16.002 3.334C8.912 3.334 3.168 9.078 3.168 16.168c0 2.286.604 4.548 1.75 6.558L3.334 28.668l6.14-1.608c1.936 1.044 4.114 1.606 6.528 1.606 7.09 0 12.834-5.744 12.834-12.834S23.092 3.334 16.002 3.334zm7.548 18.212c-.308.87-1.536 1.596-2.508 1.806-.668.14-1.54.252-4.476-.96-3.758-1.554-6.184-5.364-6.37-5.612-.182-.248-1.498-1.994-1.498-3.804s.95-2.698 1.288-3.066c.338-.368.738-.46 1.022-.46.284 0 .568.004.816.016.262.012.614-.1.96.732.35.842 1.176 2.87 1.278 3.078.102.208.17.452.034.7-.136.248-.204.402-.402.622-.198.22-.416.49-.594.658-.198.186-.404.388-.174.762.23.374 1.022 1.684 2.194 2.726 1.506 1.338 2.776 1.754 3.17 1.952.394.198.624.166.854-.1.23-.266.986-1.15 1.25-1.546.264-.396.528-.33.89-.198.362.132 2.298 1.084 2.692 1.28.394.196.656.294.754.458.098.164.098.95-.21 1.82z"/>
+        </svg>
+        <span class="hidden md:inline">WhatsApp</span>
+    </a>
+
+    <script>
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('active');
+            document.getElementById('mobile-menu-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('active');
+            document.getElementById('mobile-menu-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
 
 </body>
-
 </html>
